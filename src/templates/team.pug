@@ -1,9 +1,10 @@
 section.team: .container
     header.team__header
-        h3.section__text.section__text--team MEET OUR AMAZING TEAM
+        h3.section__title.section__title--team MEET OUR AMAZING TEAM
         p.team__text Lorem ipsum dolor sit amet proin gravida nibh vel velit
+    
         mixin team(imgURL,personName,position)
-            .team__container
+            .team__item
                 img.team__img(src=imgURL)
                 h4.team__name=personName
                 p.team__position=position
@@ -11,5 +12,5 @@ section.team: .container
         +team('./img/person2.png','DIK ADALIN','engenering')
         +team('./img/person3.png','Jeng KOl','Designer')
         +team('./img/person4.png','PET ROMAK','Marketing')
-        sub.team__subscription Become a part of our dream team, let's join us!
-        a.button(href="#") We are Hiring
+    sub.team__subscription Become a part of our dream team, let's join us!
+    a.button.button--center(href="#") We are Hiring

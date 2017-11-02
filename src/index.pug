@@ -1,11 +1,11 @@
 include ./templates/header.pug
-bodyi
+body
     header.header: .container
-        nav.main-nav
+        .main-nav
             .logo: img(src="./img/logo.png" alt="main logo")
             include ./templates/main-menu.pug
 
-        include ./templates/hero.pug
+    include ./templates/hero.pug
     include ./templates/about.pug
     include ./templates/video.pug
     include ./templates/expertise.pug
