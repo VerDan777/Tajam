@@ -1,0 +1,9 @@
+.section {
+    // box model
+    
+    &__title {
+        margin-top: 0;
+        @include font(#413d4b,$Plafair,1.375rem,bold);
+        text-transform: uppercase;
+    }
+}

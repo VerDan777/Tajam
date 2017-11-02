@@ -1,0 +1,34 @@
+.video {
+    // box model
+    position: relative;
+    height: 556px;
+    // visual
+    background-image: url("./img/video-bg.png");
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        widows: 100%;
+        height: 100%;
+        background-color: rgba($accent,0.8);
+    }
+
+    &__container {
+        @include centerer;
+        text-align: center;
+        // position: relative;
+    }
+    &__text {
+        display: block;
+        padding: 20px 0;
+
+        @include font($white,$RobotoBlack,1rem,bold);
+        // @include centerer-x;
+        text-transform: uppercase;
+    }
+}

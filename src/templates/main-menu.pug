@@ -1,0 +1,7 @@
+nav.main-menu
+    ul.main-menu__list
+        - var items = ['Home', 'About', 'Expertise', 'Teams', 'Works', 'People say', 'Contact']
+        - var itemsLinks = ['#Home','#About', '#Expertise', '#Teams','#Works','#Peoplesay','#contacts']
+        each item in items
+            li.main-menu__item
+                a(href=itemsLinks)=item

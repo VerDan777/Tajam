@@ -1,0 +1,27 @@
+.main-menu {
+    // z-index: 99;
+
+    &__list {
+        // box model
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &__item {
+        // box model
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    a {
+    @include font($white,$RobotoBlack,0.8rem,500);
+    text-decoration: none;
+    text-transform: uppercase;
+    
+        &:hover,&:active {
+            // typography
+            color: $buttoncolor;
+            transition: 0.3s ease-in-out all;
+        }
+    }
+}

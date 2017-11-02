@@ -1,4 +1,25 @@
 .header {
+    // positioning
+    position: relative;
+
     // box model
-    background: red;
+    min-height: 668px;
+
+    // visual
+    background-color: $accent;
+    background-image: url('./img/bg.png');
+    background-size: cover;
+
+    &::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(43, 37, 76, 0.8)
+
+    }
 }

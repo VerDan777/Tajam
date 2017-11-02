@@ -1,0 +1,35 @@
+.hero {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    // padding: 150px 0;
+    @include centerer;
+
+    &__title {
+        // positoning
+        position: relative;
+
+        // box model
+        margin: 0;
+        padding-bottom: 25px;
+        // visual
+        @include font($white,$Plafair,2rem, 500);
+
+        &::after {
+            z-index: 999;
+            content: '';
+            @include centerer-x;
+            width: 50px;
+            height: 3px;
+            bottom: 0px;
+            background: $buttoncolor;
+        }
+    }
+    
+    &__text {
+        @include font($white,$RobotoLight,0.875rem,normal);
+        line-height: 1.5rem;
+        
+    }
+
+}
