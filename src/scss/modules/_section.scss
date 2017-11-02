@@ -5,5 +5,10 @@
         margin-top: 0;
         @include font(#413d4b,$Plafair,1.375rem,bold);
         text-transform: uppercase;
+
+        &--expertise {
+            text-align: center;
+            // padding: 
+        }
     }
 }

@@ -1,0 +1,44 @@
+.expertise {
+
+    &__header {
+        padding-top: 50px;
+        text-align: center;
+        position: relative;
+
+        &::after {
+            content: '';
+            @include centerer-x;
+            bottom: -20px;
+            height: 3px;
+            width: 50px;
+            background: #c6c4c9;
+        }
+    }
+
+    &__title {
+        // box model
+        @include font(#413d4b,$RobotoBlack,0.875rem,bold);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    &__text {
+        // box model
+        @include font(#2f2d35,$Plafair,0.9em, 300);
+
+        &--roboto {
+            @include font(#333333,$RobotoLight,0.875rem,100);
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 33%;
+    }
+
+}

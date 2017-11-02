@@ -7,4 +7,11 @@
     border: 1px solid $buttoncolor;
     @include font($buttoncolor,$Hammer,1rem, bold);
     text-transform: uppercase;
+
+    &:hover {
+        background: lighten($accent, 20%);
+        // border: none;
+        color: $buttoncolor;
+        transition: 0.3s ease-in-out all;
+    }
 }
