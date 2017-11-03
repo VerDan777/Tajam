@@ -14,7 +14,7 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($accent, 0.8);
+        background-color: rgba($accent, 0.9);
         z-index: 0;
     }
     &__header {
@@ -23,14 +23,24 @@
         padding-top: 50px;
         text-align: center;
 
-        &::after {
-            content: '';
-            @include centerer-x;
-            bottom: -20px;
-            height: 3px;
-            width: 50px;
-            background: #c6c4c9;
-        }
+        // &::after {
+        //     content: '';
+        //     @include centerer-x;
+        //     bottom: -20px;
+        //     height: 3px;
+        //     width: 50px;
+        //     background: #c6c4c9;
+        // }
+    }
+
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        border: 1px solid #7c7890;
+
     }
 
     &__container {
@@ -40,10 +50,25 @@
         position: relative;
     }
 
+    &__name {
+        // typography
+        @include font($white,$RobotoBlack, 0.875rem,bold);
+        text-transform: uppercase;
+    }
+
+    &__position {
+        // typography
+        @include font(#c3c1c9,$RobotoLight,0.8125rem, bold);
+        text-transform: uppercase;
+        
+    }
+
     &__subscription {
         z-index: 99;
         position: relative;
+        padding-top: 70px;
         display: block;
         text-align: center;
+        @include font(#f3f3f3,$RobotoLight,0.875rem,bold);
     }
 }

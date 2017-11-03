@@ -11,7 +11,17 @@
             // padding: 
         }
         &--team {
+             position: relative;
              @include font($white,$Plafair,1.375rem,bold);
+
+             &::after {
+                 content: '';
+                 @include centerer-x;
+                 bottom: -15px;
+                background: #655d80;
+                height: 3px;
+                width: 50px;
+             }
         }
     }
 }

@@ -1,0 +1,45 @@
+.reviews {
+    // positioning
+    position: relative;
+    background-image: url("./img/bg-reviews.png");
+    background-size:cover;
+    height: 500px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($accent,0.9);
+    }
+    &__container {
+        // positioning
+        position: relative;
+        z-index: 99;
+        text-align: center;
+        padding: 60px 0;
+
+        
+    }
+    &__text {
+            text-align: center;
+            @include font($white,$Plafair,1rem,bold);
+            line-height: 1.7rem;
+            padding-bottom: 50px;
+            
+    }
+    &__person {
+        // box model
+        @include font($white,$RobotoBlack, 0.875rem,bold);
+        text-transform: uppercase;
+    }
+    &__position {
+        // typography
+        @include font(#c3c1c9,$RobotoLight,0.8125rem, bold);
+        text-transform: uppercase;
+        padding-bottom: 50px;
+        
+    }
+}
