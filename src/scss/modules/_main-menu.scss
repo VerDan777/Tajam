@@ -1,9 +1,36 @@
 .main-menu {
     // z-index: 99;
-    display: none;
+    // positioning
+    position: fixed;
+    bottom: 0;
+    left: -100px;
+    top: 0;
+    z-index: 101;
 
-    @include atTabletsLandscape {
-        display: block;
+    // box model
+    width: 200px;
+    padding: 30px;
+
+    // visual
+    background-color: $buttoncolor;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+
+    @include atDesktop {
+        padding-left: 25%;
+        position: static;
+        background: none;
+        visibility: visible;
+    }
+
+    &--shown {
+        // positioning
+        left: 0;
+        // transform: translateX(100px);
+        transition: 1s;
+        //visual
+        opacity: 0.99;
+        visibility: visible;
     }
 
     &__list {

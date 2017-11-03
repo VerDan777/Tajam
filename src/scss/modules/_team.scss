@@ -48,16 +48,37 @@
         padding: 0 30px;
         flex-wrap: wrap;
 
+        @include atTabletsPortrait {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @include atTabletsLandscape {
+            flex-direction: row;
+
+        }
         @include atDesktop {
             flex-direction: row;
             padding: 0;
+            justify-content: space-between;
         }
     }
     &__item {
         border: 1px solid #7c7890;
         margin: 15px 0;
+
+        @include atTabletsPortrait {
+            // box model
+            margin: 15px 10px; 
+        }
+
+        @include atTabletsLandscape {
+            padding-right: 5px; 
+        }
+
         @include atDesktop {
             margin: 0;
+            font-size: 0;
         }
     }
 
@@ -66,6 +87,10 @@
         // color: $white;
         z-index: 99;
         position: relative;
+    }
+
+    &__img {
+        width: 100%;
     }
 
     &__name {

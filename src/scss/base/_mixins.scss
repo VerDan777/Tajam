@@ -1,4 +1,4 @@
-@mixin atSmall {
+ @mixin atSmall {
     @media(max-width: 340px){
         @content;
     }

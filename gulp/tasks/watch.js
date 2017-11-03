@@ -39,3 +39,7 @@ gulp.task('cssInject', ['styles'], function() {
     gulp.src('./src/dist/styles.css')
     .pipe(BrowserSync.stream());
 });
+
+gulp.task('jsChanged',['scripts'],function() {
+    BrowserSync.reload();
+})

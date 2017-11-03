@@ -66,10 +66,12 @@
         &--phone {
             padding-bottom: 0;
             vertical-align: middle;
+            text-align: center;
             &::before {
                 content: url('./img/icons/phone.png');
                 padding-right: 20px;
                 vertical-align: bottom;
+                // transform: rotate(180deg);
         }
     }
     }
@@ -79,8 +81,8 @@
         list-style: none;
         display: flex;
         justify-content: space-between;
-        flex-direction: row;
-        
+        // flex-direction: row;
+        align-items: baseline;
 
         @include atDesktop {
             flex-direction: row;
@@ -114,7 +116,7 @@
     
     &__copyright {
         @include font($white,$RobotoRegular,0.875rem,bold);
-    }
+}
 
     &__sub {
         display: inline-block;

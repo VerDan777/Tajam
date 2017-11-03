@@ -21,6 +21,10 @@
              position: relative;
              @include font($white,$Plafair,1.375rem,bold);
 
+             @include atDesktop {
+                 text-align: center;
+             }
+
              &::after {
                  content: '';
                  @include centerer-x;

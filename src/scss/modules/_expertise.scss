@@ -1,5 +1,9 @@
 .expertise {
+    padding:  0 30px;
 
+    @include atDesktop {
+        padding: 0;
+    }
     &__header {
         padding-top: 50px;
         text-align: center;
@@ -44,6 +48,11 @@
         flex-wrap: wrap;
         padding: 50px 0;
 
+        @include atTabletsPortrait {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
         @include atDesktop {
             flex-direction: row;
         }
@@ -55,6 +64,19 @@
         padding: 30px 30px;
         border-top: 1px solid #ebebeb;
         border-right: 1px solid #ebebeb;
+        border-left: 1px solid #ebebeb;
+        border-bottom: 1px solid #ebebeb;
+
+        @include atTabletsPortrait {
+            // box model
+            // width: 33%;
+            border-left: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        @include atTabletsLandscape {
+            width: 33%;
+        }
 
         @include atDesktop {
             // box model
@@ -65,12 +87,20 @@
 }
 .expertise__item:nth-child(1) {
 
+    @include atTabletsLandscape {
+        border-top: none;
+    }
     @include atDesktop {
     border-top: none;
+    border-left: none;
 
     }
 }
 .expertise__item:nth-child(2) {
+
+    @include atTabletsLandscape {
+        border-top: none;
+    }
 
     @include atDesktop {
         border-top: none;
@@ -79,17 +109,33 @@
 }
 .expertise__item:nth-child(3) {
 
+    @include atTabletsLandscape {
+        border-top: none;
+        border-right: none;
+    }
+
     @include atDesktop {
         border-top: none;
         border-right: none;
+    }
+}
 
+.expertise__item:nth-child(4) {
+    @include atDesktop {
+        border-left: none;
+        border-bottom: none; 
     }
 }
 .expertise__item:nth-child(6) {
 
-    @include atDesktop {
+    @include atTabletsLandscape {
         border-right: none;
 
+    }
+
+    @include atDesktop {
+        border-right: none;
+        border-bottom: none;
     }
 }
 

@@ -1,7 +1,7 @@
 footer.footer: .container
     .footer__container
         .footer-block
-            .logo: img(src="./img/logo.png")
+            .logo.logo--footer: img(src="./img/logo.png")
             .footer__text lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
             ul.footer__list
                 li.footer__item: a.footer__item-link(href="#") Help
@@ -18,7 +18,7 @@ footer.footer: .container
             input.footer__submit(type="submit" value='')
             .socials
                 ul.socials__list
-                    - var socials = ["./img/fb.png","./img/"]
+                    - var socials = ["./img/icons/fb.png","./img/icons/tw.png","./img/icons/dribbble.png","./img/icons/in.png","./img/icons/gplus.png","./img/icons/youtube.png" ]
                     each item in socials
-                        li.socials__item: a.socials__link: img(src=socials)
+                        li.socials__item: a.socials__link: img(src=item)
             .footer__copyright Copyright @ 2015- Tajem Creative

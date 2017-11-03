@@ -9,21 +9,28 @@
         justify-content: center;
         padding: 50px 0;
         align-items: center;
+
+        @include atTabletsLandscape {
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
         
         @include atDesktop {
         flex-direction: row;
         padding: 0;
-
         }
     }
     &__logo {
 
     }
     &__description {
+        // box model
         padding-top: 75px;
-        @include atDesktop {
-        padding-left: 150px;
 
+        @include atTabletsLandscape {
+            // box model
+            padding-left: 150px; 
         }
     }
 }
