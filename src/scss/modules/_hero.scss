@@ -2,8 +2,11 @@
     position: relative;
     z-index: 99;
     text-align: center;
-    // padding: 150px 0;
-    @include centerer;
+    padding: 100px 30px;
+
+    @include atTabletsPortrait {
+        @include centerer;
+    }
 
     &__title {
         // positoning

@@ -2,10 +2,11 @@ include ./templates/header.pug
 body
     header.header: .container
         .main-nav
-            .logo: img(src="./img/logo.png" alt="main logo")
+            .logo.logo--header: img(src="./img/logo.png" alt="main logo")
+            .icon
             include ./templates/main-menu.pug
 
-    include ./templates/hero.pug
+        include ./templates/hero.pug
     include ./templates/about.pug
     include ./templates/video.pug
     include ./templates/expertise.pug

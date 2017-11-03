@@ -1,4 +1,9 @@
 .works {
+    padding: 0 30px;
+
+    @include atDesktop {
+        padding: 0;
+    }
 
     &__container {
         // display: flex;
@@ -17,7 +22,12 @@
     &__more {
         display: inline-block;
         vertical-align: top;
+        // padding-left: 10; 
+
+        @include atDesktop {
         padding-left: 70%;
+
+        }
     }
 
     &__gallery {
@@ -28,8 +38,11 @@
     }
 
     &__pic {
-        width: 237px;
+        width: 100%;
         height: 200px;
         // display: inline-block;
+        @include atDesktop {
+            width: 237px;
+        }
     }
 }

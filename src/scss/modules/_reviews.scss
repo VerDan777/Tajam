@@ -3,7 +3,12 @@
     position: relative;
     background-image: url("./img/bg-reviews.png");
     background-size:cover;
-    height: 500px;
+    min-height: 500px;
+    padding: 0 30px;
+
+    @include atDesktop {
+        padding: 0;
+    }
 
     &::after {
         content: '';
@@ -39,5 +44,13 @@
         text-transform: uppercase;
         padding-bottom: 50px;
         
+    }
+
+    &__slider {
+        // box model
+        width: 100%;
+        @include atDesktop {
+            display: none;
+        }
     }
 }

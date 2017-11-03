@@ -1,17 +1,29 @@
 .about {
     // min-height: 400px;
     margin: 30px 0;
+    padding: 0 25px;
 
     &__container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         padding: 50px 0;
+        align-items: center;
+        
+        @include atDesktop {
+        flex-direction: row;
+        padding: 0;
+
+        }
     }
     &__logo {
 
     }
     &__description {
+        padding-top: 75px;
+        @include atDesktop {
         padding-left: 150px;
+
+        }
     }
 }

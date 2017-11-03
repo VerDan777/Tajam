@@ -1,12 +1,18 @@
 .footer {
     // positioning
     position: relative;
+    // box model
+    padding: 0 30px;
 
     // visual
     background-image: url("./img/bg-footer.png");
     background-size: cover;
     // height: 400px;
     background-color: $accent;
+
+    @include atDesktop {
+        padding: 0;
+    }
 
     &::after {
         content: '';
@@ -23,18 +29,49 @@
         position: relative;
         padding: 70px 0;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
+
+        @include atDesktop {
+            flex-direction: row;
+        }
     }
 
     &-block {
-        width: 30%;
+        margin: 40px 0;
+        @include atDesktop {
+            width: 30%;
+            
+        }
     }
 
     &__text {
         padding-top: 20px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
         @include font($white,$RobotoLight,0.875rem,300);
         line-height: 1.5rem;
+
+        @include atDesktop {
+        padding-bottom: 80px;
+
+        }
+
+        &--map {
+            padding-bottom: 0;
+            &::before {
+                content: url('./img/icons/map.png');
+        }
+        }
+        &--phone {
+            padding-bottom: 0;
+            vertical-align: middle;
+            &::before {
+                content: url('./img/icons/phone.png');
+                padding-right: 20px;
+                vertical-align: bottom;
+        }
+    }
     }
     
     &__list {
@@ -42,6 +79,12 @@
         list-style: none;
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+        
+
+        @include atDesktop {
+            flex-direction: row;
+        }
     }
 
     &__item {
@@ -62,6 +105,32 @@
     &__title {
         @include font($white,$RobotoBlack,0.93rem, bold);
         text-transform: uppercase;
+        text-align: center;
+        
+        @include atDesktop {
+            text-align: left;
+        }
     }
     
+    &__copyright {
+        @include font($white,$RobotoRegular,0.875rem,bold);
+    }
+
+    &__sub {
+        display: inline-block;
+        padding: 10px 30px;
+        background: none;
+        display: none;
+    }
+
+    &__submit {
+        background: url('./img/icons/arrive.png') no-repeat #9f97b2 center center;
+        // opacity: 0.3;
+        display: inline-block;
+        border: 1px solid #fff;
+        border-radius: 0;
+        padding: 10px 30px;
+
+        display: none;
+    }
 }

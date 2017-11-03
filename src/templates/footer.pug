@@ -9,28 +9,16 @@ footer.footer: .container
                 li.footer__item: a.footer__item-link(href="#") Privacy
         .footer-block
             h3.footer__title Our studio
-            p.footer__text.footer__text--icon  Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia
-            p.footer__text.footer__text--icon (+62) 21-2224 3333
+            p.footer__text.footer__text--map Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia
+            p.footer__text.footer__text--phone (+62) 21-2224 3333
         
         .footer-block
             h3.footer__title Stay in touch
             input.footer__sub(type="text" placeholder="Subscribe on newsletter")
-            input.footer__submit(type="submit" value="submit")
+            input.footer__submit(type="submit" value='')
             .socials
                 ul.socials__list
-                    //- - var socials = ["./img/fb.png",
-                    //-     './img/tw.png',
-                    //-     './img/dribbble.png',
-                    //-     './img/in.png',
-                    //-     './img/google.png',
-                    //-     './img/youtube.png']
-                    //- - var socialsLinks = [
-                    //-     'http://facebook.com',
-                    //-     'http://twitter.com',
-                    //-     'http:///dribbble.com',
-                    //-     'http://instagram.com',
-                    //-     'http://google.com',
-                    //-     'http://youtube.com'
-                    //- 
-                        li.socials__item: a.socials__link(href=socialsLinks)
+                    - var socials = ["./img/fb.png","./img/"]
+                    each item in socials
+                        li.socials__item: a.socials__link: img(src=socials)
             .footer__copyright Copyright @ 2015- Tajem Creative

@@ -1,5 +1,10 @@
 .main-menu {
     // z-index: 99;
+    display: none;
+
+    @include atTabletsLandscape {
+        display: block;
+    }
 
     &__list {
         // box model

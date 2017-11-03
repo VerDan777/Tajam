@@ -1,13 +1,22 @@
 .partners {
     &__container {
-        padding-left: 50px; 
+
+        @include atDesktop {
+            padding-left: 50px;
+        }
     }
 
     &__gallery {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include atDesktop {
+            // box model
+            flex-direction: row;
+        }
     }
     &__img {
         // width: 50%;

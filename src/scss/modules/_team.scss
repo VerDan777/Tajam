@@ -4,6 +4,12 @@
     // box model
     background-image: url('./img/bg-team.png');
     background-size: cover;
+    padding: 0 30px;
+
+    @include atDesktop {
+        padding: 0;
+        
+    }
 
     &::after {
         content: '';
@@ -37,10 +43,22 @@
     &__list {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 30px;
+        flex-wrap: wrap;
+
+        @include atDesktop {
+            flex-direction: row;
+            padding: 0;
+        }
     }
     &__item {
         border: 1px solid #7c7890;
-
+        margin: 15px 0;
+        @include atDesktop {
+            margin: 0;
+        }
     }
 
     &__container {

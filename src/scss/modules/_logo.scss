@@ -1,4 +1,12 @@
 .logo {
+    // positioning
     position: relative;
     z-index: 9999;
+
+    // box model
+    text-align: center;
+    &--header {
+        margin: 0 auto;
+        padding-top: 20px;
+    }
 }

@@ -1,14 +1,25 @@
 .form {
     // box model
-    
+    padding: 0 30px;
+    @include atDesktop {
+        padding: 0;
+    }
 
     &-main__container {
         display: flex;
         justify-content: space-between;
-        padding-top: 70px; 
+        flex-wrap: wrap;
+        padding-top: 70px;
     }
     &__form {
-        width: 460px;
+        // width: 460px;
+    }
+
+    &__container {
+        width: 100%;
+        @include atDesktop {
+            
+        }
     }
 
     &__group-input {
@@ -21,7 +32,7 @@
     }
 
     &__textarea {
-
+        // bg
     }
 
 }
