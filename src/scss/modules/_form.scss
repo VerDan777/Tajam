@@ -1,0 +1,27 @@
+.form {
+    // box model
+    
+
+    &-main__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 70px; 
+    }
+    &__form {
+        width: 460px;
+    }
+
+    &__group-input {
+        margin: 20px 0;
+    }
+    &__input {
+        padding: 15px 15px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    &__textarea {
+
+    }
+
+}

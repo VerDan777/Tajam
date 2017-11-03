@@ -1,0 +1,21 @@
+.partners {
+    &__container {
+        padding-left: 50px; 
+    }
+
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between
+    }
+    &__img {
+        // width: 50%;
+        padding: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

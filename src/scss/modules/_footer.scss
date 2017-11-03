@@ -1,0 +1,67 @@
+.footer {
+    // positioning
+    position: relative;
+
+    // visual
+    background-image: url("./img/bg-footer.png");
+    background-size: cover;
+    // height: 400px;
+    background-color: $accent;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($accent,0.9);
+    }
+
+    &__container {
+        z-index: 99;
+        position: relative;
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-block {
+        width: 30%;
+    }
+
+    &__text {
+        padding-top: 20px;
+        padding-bottom: 80px;
+        @include font($white,$RobotoLight,0.875rem,300);
+        line-height: 1.5rem;
+    }
+    
+    &__list {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+
+        &-link {
+            text-decoration: none;
+            @include font($white,$RobotoRegular,0.875rem,bold);
+
+            &:hover, &:active {
+                color: $buttoncolor;
+                transition: 0.3s ease-in-out all;
+            }
+        }
+    }
+
+    &__title {
+        @include font($white,$RobotoBlack,0.93rem, bold);
+        text-transform: uppercase;
+    }
+    
+}
