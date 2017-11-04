@@ -105,6 +105,7 @@ var MobileMenu = function () {
 
         this.mainMenu = (0, _jquery2.default)('.main-menu');
         this.menuIcon = (0, _jquery2.default)('.icon');
+        this.menuIconClose = (0, _jquery2.default)('.icon--close-x');
         this.menuLinks = (0, _jquery2.default)('.main-menu__item a');
         this.body = (0, _jquery2.default)('body');
         this.events();
@@ -114,6 +115,9 @@ var MobileMenu = function () {
         key: 'events',
         value: function events() {
             this.menuIcon.click(this.toggleTheMenu.bind(this));
+            // this.menuIconClose.click(
+            //     $('.main-menu--shown').css('transform','translateX(250px)')
+            // )
             this.menuLinks.click(this.toggleTheMenu.bind(this));
             this.menuLinks.on('tap', this.toggleTheMenu.bind(this));
         }
@@ -121,9 +125,7 @@ var MobileMenu = function () {
         key: 'toggleTheMenu',
         value: function toggleTheMenu() {
             this.mainMenu.toggleClass('main-menu--shown');
-            this.body.setTimeout(function () {
-                this.body.addClass('body');
-            }, 1000);
+            this.body.toggleClass('body');
             this.menuIcon.toggleClass('icon--close-x');
         }
     }]);

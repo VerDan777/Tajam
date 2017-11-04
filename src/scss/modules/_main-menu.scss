@@ -5,10 +5,10 @@
     bottom: 0;
     left: -100px;
     top: 0;
-    z-index: 101;
+    z-index: 999999;
 
     // box model
-    width: 200px;
+    width: 250px;
     padding: 30px;
 
     // visual
@@ -21,12 +21,14 @@
         position: static;
         background: none;
         visibility: visible;
+        width: auto;
     }
 
     &--shown {
         // positioning
+        position: fixed;
         left: 0;
-        // transform: translateX(100px);
+        transform: translateX(-250px);
         transition: 1s;
         //visual
         opacity: 0.99;
@@ -37,19 +39,35 @@
         // box model
         list-style: none;
         padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include atDesktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__item {
         // box model
         display: inline-block;
         padding-right: 20px;
+        padding: 15px 0;
+
+        @include atDesktop {
+           padding-right: 20px;
+           padding-top: 0;
+           padding-bottom: 0; 
+        }
     }
 
     a {
-    @include font($white,$RobotoBlack,0.8rem,500);
-    text-decoration: none;
-    text-transform: uppercase;
-    
+        @include font($white,$RobotoBlack,0.8rem,500);
+        text-decoration: none;
+        text-transform: uppercase;
+        
         &:hover,&:active {
             // typography
             color: $buttoncolor;

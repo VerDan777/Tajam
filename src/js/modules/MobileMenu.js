@@ -4,6 +4,7 @@ class MobileMenu {
     constructor() {
         this.mainMenu = $('.main-menu');
         this.menuIcon = $('.icon');
+        this.menuIconClose = $('.icon--close-x');
         this.menuLinks = $('.main-menu__item a');
         this.body = $('body');
         this.events();
@@ -13,6 +14,9 @@ class MobileMenu {
         this.menuIcon.click(
             this.toggleTheMenu.bind(this)
         )
+        // this.menuIconClose.click(
+        //     $('.main-menu--shown').css('transform','translateX(250px)')
+        // )
         this.menuLinks.click(
             this.toggleTheMenu.bind(this)
         )
@@ -22,9 +26,7 @@ class MobileMenu {
     }
     toggleTheMenu() {
         this.mainMenu.toggleClass('main-menu--shown');
-        this.body.setTimeout(function(){
-            this.body.addClass('body')
-        }, 1000);
+        this.body.toggleClass('body');
         this.menuIcon.toggleClass('icon--close-x');
     }
 }

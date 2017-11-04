@@ -17,6 +17,8 @@ body {
     box-sizing: border-box;
 }
 .body {
-    position: absolute;
-    left: 100px;
+    // position: absolute
+    transform: translateX(250px);
+    transition: 1s;
+
 }

@@ -28,17 +28,7 @@
         position: relative;
         padding-top: 50px;
         text-align: center;
-
-        // &::after {
-        //     content: '';
-        //     @include centerer-x;
-        //     bottom: -20px;
-        //     height: 3px;
-        //     width: 50px;
-        //     background: #c6c4c9;
-        // }
     }
-
 
     &__list {
         display: flex;
@@ -80,6 +70,12 @@
             margin: 0;
             font-size: 0;
         }
+    }
+
+    &__text {
+
+        // typography
+        @include font(#f9f9f9,$RobotoBlack,0.875rem,100);
     }
 
     &__container {

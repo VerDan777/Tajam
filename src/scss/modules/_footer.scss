@@ -10,7 +10,7 @@
     // height: 400px;
     background-color: $accent;
 
-    @include atDesktop {
+    @include atTabletsPortrait {
         padding: 0;
     }
 
@@ -33,16 +33,24 @@
         align-items: center;
         justify-content: space-between;
 
-        @include atDesktop {
+        @include atTabletsPortrait {
             flex-direction: row;
+            align-items: flex-start;
+            align-content: flex-end;
+            padding: 70px 30px;
         }
     }
 
     &-block {
         margin: 40px 0;
-        @include atDesktop {
+        @include atTabletsPortrait {
             width: 30%;
-            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // align-items: flex-end;
         }
     }
 
@@ -52,13 +60,16 @@
         @include font($white,$RobotoLight,0.875rem,300);
         line-height: 1.5rem;
 
-        @include atDesktop {
-        padding-bottom: 80px;
+        @include atTabletsPortrait {
+            // padding-top: 20px;
+            height: 200px;
+            padding-bottom: 80px;
+            margin: 0;
 
         }
 
         &--map {
-            padding-bottom: 0;
+            padding-bottom: 20px;
             &::before {
                 content: url('./img/icons/map.png');
         }
@@ -84,7 +95,7 @@
         // flex-direction: row;
         align-items: baseline;
 
-        @include atDesktop {
+        @include atTabletsPortrait {
             flex-direction: row;
         }
     }
@@ -109,8 +120,9 @@
         text-transform: uppercase;
         text-align: center;
         
-        @include atDesktop {
+        @include atTabletsPortrait {
             text-align: left;
+            margin-bottom: 40px;
         }
     }
     

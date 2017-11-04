@@ -49,8 +49,12 @@
     &__slider {
         // box model
         width: 100%;
-        @include atDesktop {
-            display: none;
+
+        @include atTabletsPortrait {
+            width: auto;
         }
+        // @include atDesktop {
+        //     display: none;
+        // }
     }
 }

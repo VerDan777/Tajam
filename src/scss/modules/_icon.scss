@@ -64,6 +64,10 @@
         transition: all 0.3s ease-out; 
     }
        &--close-x {
+        // positioining
+        position: fixed;
+        left: -230px;
+        z-index: 999999999;
         // visual
         background-color: transparent;
         border: 1px solid rgba($white, 0.2);

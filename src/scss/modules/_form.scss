@@ -21,6 +21,7 @@
     &__title {
         @include font(#413d4b,$Plafair,1.375rem, bold);
         text-transform: uppercase;
+        margin-bottom: 50px;
     }
 
 

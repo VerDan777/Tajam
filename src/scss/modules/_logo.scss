@@ -16,8 +16,14 @@
     }
 
     &--footer {
-        width: 50%;
         margin: 0 auto;
-        padding-top: 20px; 
+        padding-top: 20px;
+        width: 50%;
+
+        @include atTabletsPortrait {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
     }
 }
