@@ -70,8 +70,8 @@
         @include atTabletsPortrait {
             // box model
             // width: 33%;
-            border-left: 1px solid #ebebeb;
-            border-bottom: 1px solid #ebebeb;
+            // border-left: 1px solid #ebebeb;
+            // border-bottom: 1px solid #ebebeb;
         }
 
         @include atTabletsLandscape {
@@ -126,6 +126,11 @@
         border-bottom: none; 
     }
 }
+.expertise__item:nth-child(5) {
+    @include atDesktop {
+        border-bottom: none;
+    }
+}
 .expertise__item:nth-child(6) {
 
     @include atTabletsLandscape {
@@ -136,6 +141,7 @@
     @include atDesktop {
         border-right: none;
         border-bottom: none;
+        border-top: none;
     }
 }
 

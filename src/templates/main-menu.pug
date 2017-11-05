@@ -1,8 +1,9 @@
 nav.main-menu
     ul.main-menu__list
         - var items = ['Home', 'About', 'Expertise', 'Teams', 'Works', 'People say', 'Contact']
-        - var itemsLinks = ['#Home','#About', '#Expertise', '#Teams','#Works','#Peoplesay','#contacts']
+        - var itemsLinks = ['#home','#about', '#expertise', '#team','#works','#reviews','#contacts']
+        - var link = ['homelink','aboutlink','expertiselink','teamlink','workslink','reviewslink','contactslink']
         - var data = ['home', 'about','expertise','teams','works','peoplesay', 'contact']
         each item,key in items
             li.main-menu__item
-                a.main-menu__link(href=itemsLinks[key] data-link=data[key])=item
+                a.main-menu__link(href=itemsLinks[key] data-link=data[key] id=link[key])=item

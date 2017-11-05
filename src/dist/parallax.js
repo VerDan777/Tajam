@@ -1,6 +1,4 @@
-document.body.onload = function() {
-    setTimeout(function() {
-        var preloader = document.getElementsById('overlay');
-        preloaderclassList.add('done');
-    },1500)
-}
+$(window).on('load', function() {
+    var preloader = $('#overlay');
+    preloader.delay(1000).fadeOut('slow');
+})

@@ -1,5 +1,9 @@
 import MobileMenu from './modules/MobileMenu.js';
-// import Scroll from './modules/scroll.js';
+import Spinner from './modules/spinner.js';
+import Scroll from './modules/Scroll.js';
+import Valid from './modules/Validation.js';
 
 const mobilemenu = new MobileMenu();
-// const scroll = new Scroll();
+const spinner = new Spinner();
+const scroll = new Scroll();
+const valid = new Valid();

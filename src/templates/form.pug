@@ -1,17 +1,18 @@
-section.form.section: .container
+section.form(id="contacts").section: .container
     .form-main__container
         .form__container
             h2.form__title Give us a good news
-            form.form__form(action="" method="POST")
+            form.form__form(action="order.php" method="POST")
                 .form__group-input
-                    input.form__input(type="text" placeholder="Name")
+                    input.form__input(type="text" name="fullname" placeholder="Name")
                 .form__group-input
-                    input.form__input(type="email" placeholder="Email")
+                    input.form__input(type="email" name="email" placeholder="Email")
                 .form__group-input
-                    input.form__input(type="text" placeholder="Subject")
+                    input.form__input(type="text" name="subject" placeholder="Subject")
                 .form__group-input
                     textarea.form__textarea(placeholder="Your Message")
-                input.form__button.button(type="submit" value="Submit")
+                .center
+                    input.form__button.button(type="submit" value="Submit")
 
         .partners__container
             h2.form__title Our happy clients

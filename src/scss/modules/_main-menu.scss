@@ -30,9 +30,11 @@
         left: 0;
         transform: translateX(-250px);
         transition: 1s;
+
         //visual
         opacity: 0.99;
         visibility: visible;
+        box-shadow: 6px 0px 7px -4px rgba(0,0,0,0.75);
     }
 
     &__list {

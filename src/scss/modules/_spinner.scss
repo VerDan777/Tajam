@@ -14,6 +14,10 @@
     margin: auto;
     
     animation: spin 1s infinite linear;
+
+    &__load {
+        @include centerer;
+    }
 }
 
 @keyframes spin {
@@ -26,16 +30,10 @@
 #overlay {
   height:100%;
   width:100%;
-  background:rgba(0, 0, 0, 1);
+  background: $buttoncolor;
   position:fixed;
   left:0;
   top:0;
   visibility: visible;
   z-index: 999;
-}
-
-.done {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
 }

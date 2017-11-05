@@ -6,23 +6,33 @@
     }
 
     &__container {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
-        // text-align: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
         padding-top: 70px;
+
+        @include atSmall {
+            display: block;
+            text-align: left;
+        }
     }
     &__title {
         display: inline-block;
         vertical-align: top;
         margin: 0;
+
+        @include atSmall {
+            padding-bottom: 20px;
+        }
         
     }
 
     &__more {
         display: inline-block;
         vertical-align: top;
-        // padding-left: 10; 
+        text-decoration: none;
+        @include font(black,$RobotoBlack,1rem,300);
 
         @include atDesktop {
             // box model

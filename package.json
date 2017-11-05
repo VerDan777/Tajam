@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "fullpage.js": "^2.9.5",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0"
   }
 }

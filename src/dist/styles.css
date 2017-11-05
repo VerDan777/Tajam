@@ -84,6 +84,15 @@ body {
   position: relative;
 }
 
+.main-nav__fixed {
+  background-color: rgba(58, 46, 94, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0 1px 2px 1px;
+  box-shadow: 0 1px 2px 1px;
+}
+
 .main-menu {
   position: fixed;
   bottom: 0;
@@ -107,6 +116,8 @@ body {
   transition: 1s;
   opacity: 0.99;
   visibility: visible;
+  -webkit-box-shadow: 6px 0px 7px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 0px 7px -4px rgba(0, 0, 0, 0.75);
 }
 
 .main-menu__list {
@@ -449,6 +460,7 @@ body {
   font-family: "Roboto Black", sans-serif;
   font-size: 0.875rem;
   font-weight: 100;
+  margin: 28px 0;
 }
 
 .team__container {
@@ -497,6 +509,16 @@ body {
 }
 
 .works__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
   padding-top: 70px;
 }
 
@@ -509,6 +531,11 @@ body {
 .works__more {
   display: inline-block;
   vertical-align: top;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto Black", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .works__gallery {
@@ -931,21 +958,23 @@ body {
   animation: spin 1s infinite linear;
 }
 
+.spinner__load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 #overlay {
   height: 100%;
   width: 100%;
-  background: black;
+  background: #00e0d0;
   position: fixed;
   left: 0;
   top: 0;
   visibility: visible;
   z-index: 999;
-}
-
-.done {
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
 }
 
 @media (min-width: 768px) {
@@ -971,11 +1000,6 @@ body {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-  }
-
-  .expertise__item {
-    border-left: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
   }
 
   .team__list {
@@ -1117,10 +1141,6 @@ body {
     flex-direction: row;
   }
 
-  .team__item {
-    padding-right: 5px;
-  }
-
   .form__container {
     width: 40%;
   }
@@ -1215,9 +1235,14 @@ body {
     border-bottom: none;
   }
 
+  .expertise__item:nth-child(5) {
+    border-bottom: none;
+  }
+
   .expertise__item:nth-child(6) {
     border-right: none;
     border-bottom: none;
+    border-top: none;
   }
 
   .team {
@@ -1273,6 +1298,17 @@ body {
 
   .icon {
     display: none;
+  }
+}
+
+@media (max-width: 374px) {
+  .works__container {
+    display: block;
+    text-align: left;
+  }
+
+  .works__title {
+    padding-bottom: 20px;
   }
 }
 
