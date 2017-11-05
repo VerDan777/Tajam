@@ -5,7 +5,7 @@ class MobileMenu {
         this.mainMenu = $('.main-menu');
         this.menuIcon = $('.icon');
         this.menuIconClose = $('.icon--close-x');
-        this.menuLinks = $('.main-menu__item a');
+        this.menuLinks = $('.main-menu__item__link');
         this.body = $('body');
         this.events();
     }
@@ -14,9 +14,6 @@ class MobileMenu {
         this.menuIcon.click(
             this.toggleTheMenu.bind(this)
         )
-        // this.menuIconClose.click(
-        //     $('.main-menu--shown').css('transform','translateX(250px)')
-        // )
         this.menuLinks.click(
             this.toggleTheMenu.bind(this)
         )

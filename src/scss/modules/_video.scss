@@ -5,6 +5,8 @@
     // visual
     background-image: url("./img/video-bg.png");
     background-size: cover;
+    background-attachment: fixed;
+
 
     &::before {
         content: '';

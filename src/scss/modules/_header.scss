@@ -9,6 +9,7 @@
     background-color: $accent;
     background-image: url('./img/bg.png');
     background-size: cover;
+    background-attachment: fixed;
 
     &::before {
         content: '';

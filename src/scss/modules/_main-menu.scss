@@ -63,7 +63,7 @@
         }
     }
 
-    a {
+    &__link {
         @include font($white,$RobotoBlack,0.8rem,500);
         text-decoration: none;
         text-transform: uppercase;

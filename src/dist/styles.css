@@ -30,6 +30,7 @@ body {
   background-color: #3a2e5e;
   background-image: url("./img/bg.png");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header::before {
@@ -132,7 +133,7 @@ body {
   padding: 15px 0;
 }
 
-.main-menu a {
+.main-menu__link {
   color: #fff;
   font-family: "Roboto Black", sans-serif;
   font-size: 0.8rem;
@@ -141,7 +142,7 @@ body {
   text-transform: uppercase;
 }
 
-.main-menu a:hover,.main-menu a:active {
+.main-menu__link:hover,.main-menu__link:active {
   color: #00e0d0;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
@@ -239,6 +240,7 @@ body {
   height: 556px;
   background-image: url("./img/video-bg.png");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .video::before {
@@ -393,6 +395,7 @@ body {
 .team {
   position: relative;
   background-image: url("./img/bg-team.png");
+  background-attachment: fixed;
   background-size: cover;
   padding: 0 30px;
 }
@@ -525,6 +528,7 @@ body {
 .reviews {
   position: relative;
   background-image: url("./img/bg-reviews.png");
+  background-attachment: fixed;
   background-size: cover;
   min-height: 500px;
   padding: 0 30px;
@@ -674,6 +678,7 @@ body {
   position: relative;
   padding: 0 30px;
   background-image: url("./img/bg-footer.png");
+  background-attachment: fixed;
   background-size: cover;
   background-color: #3a2e5e;
 }
@@ -908,6 +913,39 @@ body {
 .socials__item {
   height: 40px;
   width: 40px;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  background: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: visible;
+  z-index: 999;
+}
+
+.done {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
@@ -1235,5 +1273,29 @@ body {
 
   .icon {
     display: none;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

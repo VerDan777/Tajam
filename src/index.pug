@@ -1,18 +1,25 @@
 include ./templates/header.pug
 body
-    header.header: .container
-        .main-nav
-            .logo.logo--header: img(src="./img/logo.png" alt="main logo")
-            .icon: .icon__middle
-            include ./templates/main-menu.pug
+        #overlay
+            .spinner
+        header.header.section: .container
+            .main-nav
+                .logo.logo--header: img(src="./img/logo.png" alt="main logo")
+                .icon: .icon__middle
+                include ./templates/main-menu.pug
 
-        include ./templates/hero.pug
-    include ./templates/about.pug
-    include ./templates/video.pug
-    include ./templates/expertise.pug
-    include ./templates/team.pug
-    include ./templates/works.pug
-    include ./templates/reviews.pug
-    include ./templates/form.pug
-    include ./templates/footer.pug
+            include ./templates/hero.pug
+        include ./templates/about.pug
+        include ./templates/video.pug
+        include ./templates/expertise.pug
+        include ./templates/team.pug
+        include ./templates/works.pug
+        include ./templates/reviews.pug
+        include ./templates/form.pug
+        include ./templates/footer.pug
+
 script(src="app.js")
+script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous")
+script(src="parallax.js")

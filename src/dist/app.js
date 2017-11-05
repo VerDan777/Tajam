@@ -76,7 +76,10 @@ var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import Scroll from './modules/scroll.js';
+
 var mobilemenu = new _MobileMenu2.default();
+// const scroll = new Scroll();
 
 /***/ }),
 /* 1 */
@@ -106,7 +109,7 @@ var MobileMenu = function () {
         this.mainMenu = (0, _jquery2.default)('.main-menu');
         this.menuIcon = (0, _jquery2.default)('.icon');
         this.menuIconClose = (0, _jquery2.default)('.icon--close-x');
-        this.menuLinks = (0, _jquery2.default)('.main-menu__item a');
+        this.menuLinks = (0, _jquery2.default)('.main-menu__item__link');
         this.body = (0, _jquery2.default)('body');
         this.events();
     }
@@ -115,9 +118,6 @@ var MobileMenu = function () {
         key: 'events',
         value: function events() {
             this.menuIcon.click(this.toggleTheMenu.bind(this));
-            // this.menuIconClose.click(
-            //     $('.main-menu--shown').css('transform','translateX(250px)')
-            // )
             this.menuLinks.click(this.toggleTheMenu.bind(this));
             this.menuLinks.on('tap', this.toggleTheMenu.bind(this));
         }

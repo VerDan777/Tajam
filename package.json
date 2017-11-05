@@ -41,6 +41,7 @@
     "webpack-stream": "^4.0.0"
   },
   "dependencies": {
+    "fullpage.js": "^2.9.5",
     "jquery": "^3.2.1"
   }
 }
