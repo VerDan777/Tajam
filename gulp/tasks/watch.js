@@ -31,6 +31,23 @@ watch("./src/js/**/*.js", function() {
     gulp.start("jsChanged");
 });
 
+// wordpress
+
+watch('./wp/*.php', ()=> {
+    gulp.start('copyPHP');
+})
+
+watch('./src/dist/styles.css', ()=> {
+    gulp.start('copyCSS');
+})
+
+watch('./src/dist/*.js',()=> {
+    gulp.start('copyJS');
+})
+
+watch('./src/dist/img/*.*', ()=> {
+    gulp.start('copyImg');
+})
 
 gulp.task('pugChanged', ['pugRender'], function() {
     BrowserSync.reload();
@@ -43,3 +60,5 @@ gulp.task('cssInject', ['styles'], function() {
 gulp.task('jsChanged',['scripts'],function() {
     BrowserSync.reload();
 })
+
+

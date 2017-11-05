@@ -8,7 +8,8 @@ var tasks = [
     './gulp/tasks/image-min.js',
     './gulp/tasks/symbols.js',
     './gulp/tasks/watch.js',
-    './gulp/tasks/scripts.js'
+    './gulp/tasks/scripts.js',
+    './gulp/tasks/wordpress.js'
 ]
 
 for(var i= 0; i<tasks.length;i++) {
