@@ -9,6 +9,7 @@ gulp.task('copyPHP', ()=> {
 
 gulp.task('copyCSS', ()=> {
     return gulp.src('./src/dist/styles.css')
+    .pipe(rename('style.css'))
     .pipe(gulp.dest('/Applications/XAMPP/xamppfiles/htdocs/tajem/wp-content/themes/tajem/'));
 })
 
