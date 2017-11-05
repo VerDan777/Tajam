@@ -1,5 +1,9 @@
 @import url(normalize.css);
-
+/*
+    Theme Name: Tajem
+    Description: special theme for Tajem
+    Author: Daniil Vereschagin
+*/
 html {
   height: 100%;
   width: 100%;
@@ -30,6 +34,7 @@ body {
   background-color: #3a2e5e;
   background-image: url("./img/bg.png");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header::before {
@@ -83,6 +88,15 @@ body {
   position: relative;
 }
 
+.main-nav__fixed {
+  background-color: rgba(58, 46, 94, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0 1px 2px 1px;
+  box-shadow: 0 1px 2px 1px;
+}
+
 .main-menu {
   position: fixed;
   bottom: 0;
@@ -106,6 +120,8 @@ body {
   transition: 1s;
   opacity: 0.99;
   visibility: visible;
+  -webkit-box-shadow: 6px 0px 7px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 0px 7px -4px rgba(0, 0, 0, 0.75);
 }
 
 .main-menu__list {
@@ -132,7 +148,7 @@ body {
   padding: 15px 0;
 }
 
-.main-menu a {
+.main-menu__link {
   color: #fff;
   font-family: "Roboto Black", sans-serif;
   font-size: 0.8rem;
@@ -141,7 +157,7 @@ body {
   text-transform: uppercase;
 }
 
-.main-menu a:hover,.main-menu a:active {
+.main-menu__link:hover,.main-menu__link:active {
   color: #00e0d0;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all;
@@ -239,6 +255,7 @@ body {
   height: 556px;
   background-image: url("./img/video-bg.png");
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .video::before {
@@ -393,6 +410,7 @@ body {
 .team {
   position: relative;
   background-image: url("./img/bg-team.png");
+  background-attachment: fixed;
   background-size: cover;
   padding: 0 30px;
 }
@@ -446,6 +464,7 @@ body {
   font-family: "Roboto Black", sans-serif;
   font-size: 0.875rem;
   font-weight: 100;
+  margin: 28px 0;
 }
 
 .team__container {
@@ -494,6 +513,16 @@ body {
 }
 
 .works__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
   padding-top: 70px;
 }
 
@@ -506,6 +535,11 @@ body {
 .works__more {
   display: inline-block;
   vertical-align: top;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto Black", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .works__gallery {
@@ -525,6 +559,7 @@ body {
 .reviews {
   position: relative;
   background-image: url("./img/bg-reviews.png");
+  background-attachment: fixed;
   background-size: cover;
   min-height: 500px;
   padding: 0 30px;
@@ -674,6 +709,7 @@ body {
   position: relative;
   padding: 0 30px;
   background-image: url("./img/bg-footer.png");
+  background-attachment: fixed;
   background-size: cover;
   background-color: #3a2e5e;
 }
@@ -910,6 +946,41 @@ body {
   width: 40px;
 }
 
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+.spinner__load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  background: #00e0d0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: visible;
+  z-index: 999;
+}
+
 @media (min-width: 768px) {
   .logo--footer {
     padding: 0;
@@ -933,11 +1004,6 @@ body {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-  }
-
-  .expertise__item {
-    border-left: 1px solid #ebebeb;
-    border-bottom: 1px solid #ebebeb;
   }
 
   .team__list {
@@ -1079,10 +1145,6 @@ body {
     flex-direction: row;
   }
 
-  .team__item {
-    padding-right: 5px;
-  }
-
   .form__container {
     width: 40%;
   }
@@ -1177,9 +1239,14 @@ body {
     border-bottom: none;
   }
 
+  .expertise__item:nth-child(5) {
+    border-bottom: none;
+  }
+
   .expertise__item:nth-child(6) {
     border-right: none;
     border-bottom: none;
+    border-top: none;
   }
 
   .team {
@@ -1235,5 +1302,40 @@ body {
 
   .icon {
     display: none;
+  }
+}
+
+@media (max-width: 374px) {
+  .works__container {
+    display: block;
+    text-align: left;
+  }
+
+  .works__title {
+    padding-bottom: 20px;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
