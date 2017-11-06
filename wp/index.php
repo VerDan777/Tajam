@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>"/>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Roboto" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.csshttps://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css" rel="stylessheet"/>
-  <title>Tajam</title>
-</head>
-<body>
-  <div id="overlay">
-    <div class="spinner"></div>
-  </div>
-  <header class="header section" id="home">
-    <div class="container">
-      <div class="main-nav">
-        <div class="logo logo--header"><img src="./img/logo.png" alt="main logo"/></div>
-        <div class="icon">
-          <div class="icon__middle"></div>
-        </div>
-        <nav class="main-menu">
-          <ul class="main-menu__list">
-            <li class="main-menu__item"><a class="main-menu__link" href="#home" data-link="home" id="homelink">Home</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#about" data-link="about" id="aboutlink">About</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#expertise" data-link="expertise" id="expertiselink">Expertise</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#team" data-link="teams" id="teamlink">Teams</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#works" data-link="works" id="workslink">Works</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#reviews" data-link="peoplesay" id="reviewslink">People say</a></li>
-            <li class="main-menu__item"><a class="main-menu__link" href="#contacts" data-link="contact" id="contactslink">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="hero">
-        <h1 class="hero__title">We Are Awesome Creative Agency</h1>
-        <p class="hero__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p><a class="button" href="#learnmore">Learn More</a>
-      </div>
-    </div>
-  </header>
-  <section class="about section" data-anchor="about" id="about">
+<?php get_header(); ?>
+<section class="about section" data-anchor="about" id="about">
     <div class="container">
       <div class="about__container">
         <div class="about__logo"><img class="about__pic" src="./img/logo2.png"/></div>
@@ -64,31 +23,32 @@
         <h3 class="section__title section__title--expertise">Expertise</h3>
         <p class="expertise__text">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
       </header>
-      <header class="expertise__list">
-                <div class="expertise__item"><img class="expertise__img" src="./img/icons/screen.png" alt="photoshop"/>
-                  <h3 class="expertise__title">Web design &amp; development</h3>
-                  <p class="expertise__text expertise__text--roboto">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+      <header class="expertise__list"
+      <?php
+        // Vars
+
+        $args = array(
+            'category_name' => 'expertise-item'
+        );
+        if(have_posts()) {
+            while(have_posts()) {
+                the_post();
+
+                // Vars
+                $item_title = get_field('item-title');
+                $item_img = get_field('item-img');
+                $item_text = get_field('item-text');
+  
+      ?>
+                <div class="expertise__item"><img class="expertise__img" src="<?php echo $item_img; ?>" alt="photoshop"/>
+                  <h3 class="expertise__title"><?php echo $item_title; ?></h3>
+                  <p class="expertise__text expertise__text--roboto"><?php echo $item_text; ?></p>
                 </div>
-                <div class="expertise__item"><img class="expertise__img" src="./img/icons/paint.png" alt="branding"/>
-                  <h3 class="expertise__title">Branding Indentity</h3>
-                  <p class="expertise__text expertise__text--roboto">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </div>
-                <div class="expertise__item"><img class="expertise__img" src="./img/icons/mobile.png" alt="app"/>
-                  <h3 class="expertise__title">Mobile App</h3>
-                  <p class="expertise__text expertise__text--roboto">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </div>
-                <div class="expertise__item"><img class="expertise__img" src="./img/icons/clock.png" alt="optimization"/>
-                  <h3 class="expertise__title">SEARCH ENGINE OPTIMIZATION</h3>
-                  <p class="expertise__text expertise__text--roboto">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </div>
-                <div class="expertise__item"><img class="expertise__img" src="./img/icons/dendi.png" alt="game"/>
-                  <h3 class="expertise__title">Game Development</h3>
-                  <p class="expertise__text expertise__text--roboto">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </div>
-                <div class="expertise__item"><img class="expertise__img" src="./img/icons/heart.png" alt="love"/>
-                  <h3 class="expertise__title">Made with love</h3>
-                  <p class="expertise__text expertise__text--roboto">This is Photoshops version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
-                </div>
+
+      <?php
+        }
+      }
+      ?>
       </header>
     </div>
   </section>
@@ -97,23 +57,30 @@
       <header class="team__header">
         <h3 class="section__title section__title--team">MEET OUR AMAZING TEAM</h3>
         <p class="team__text">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
+        
         <div class="team__list">
-                    <div class="team__item"><img class="team__img" src="./img/person.jpg"/>
-                      <h4 class="team__name">Semf UCUK</h4>
-                      <p class="team__position">CEO &amp; Founder</p>
+            <?php 
+            $args = array(
+                'category_name' => 'team-item'
+            );
+
+            if(have_posts()) {
+                while(have_posts()) {
+                    have_posts();
+
+                    $team_name = get_field('team-name');
+                    $team_position = get_field('team-position');
+                    $team_img = get_field('team-img');
+           
+        ?>
+                    <div class="team__item"><img class="team__img" src="<?php echo $team_img; ?>"/>
+                      <h4 class="team__name"><?php echo $team_name; ?></h4>
+                      <p class="team__position"><?php echo $team_position; ?></p>
                     </div>
-                    <div class="team__item"><img class="team__img" src="./img/person.jpg"/>
-                      <h4 class="team__name">DIK ADALIN</h4>
-                      <p class="team__position">engenering</p>
-                    </div>
-                    <div class="team__item"><img class="team__img" src="./img/person.jpg"/>
-                      <h4 class="team__name">Jeng KOl</h4>
-                      <p class="team__position">Designer</p>
-                    </div>
-                    <div class="team__item"><img class="team__img" src="./img/person.jpg"/>
-                      <h4 class="team__name">PET ROMAK</h4>
-                      <p class="team__position">Marketing</p>
-                    </div>
+        <?php
+                    }
+                }
+        ?> 
         </div>
       </header><sub class="team__subscription">Become a part of our dream team, let's join us!</sub>
       <div class="center"><a class="button button--center" href="#">We are Hiring</a></div>
@@ -169,41 +136,4 @@
       </div>
     </div>
   </section>
-  <footer class="footer section">
-    <div class="container">
-      <div class="footer__container">
-        <div class="footer-block">
-          <div class="logo logo--footer center"><img src="./img/logo.png"/></div>
-          <div class="footer__text">lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</div>
-          <ul class="footer__list">
-            <li class="footer__item"><a class="footer__item-link" href="#">Help</a></li>
-            <li class="footer__item"><a class="footer__item-link" href="#">Terms & Condition</a></li>
-            <li class="footer__item"><a class="footer__item-link" href="#">Privacy</a></li>
-          </ul>
-        </div>
-        <div class="footer-block">
-          <h3 class="footer__title">Our studio</h3>
-          <p class="footer__text footer__text--map">Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
-          <p class="footer__text footer__text--phone">(+62) 21-2224 3333</p>
-        </div>
-        <div class="footer-block">
-          <h3 class="footer__title">Stay in touch</h3>
-          <input class="footer__sub" type="text" placeholder="Subscribe on newsletter"/>
-          <input class="footer__submit" type="submit" value=""/>
-          <div class="socials">
-            <ul class="socials__list">
-              <li class="socials__item"><a class="socials__link"><img src="./img/icons/fb.png"/></a></li>
-              <li class="socials__item"><a class="socials__link"><img src="./img/icons/tw.png"/></a></li>
-              <li class="socials__item"><a class="socials__link"><img src="./img/icons/dribbble.png"/></a></li>
-              <li class="socials__item"><a class="socials__link"><img src="./img/icons/in.png"/></a></li>
-              <li class="socials__item"><a class="socials__link"><img src="./img/icons/gplus.png"/></a></li>
-              <li class="socials__item"><a class="socials__link"><img src="./img/icons/youtube.png"/></a></li>
-            </ul>
-          </div>
-          <div class="footer__copyright">Copyright @ 2015&nbsp;-&nbsp;Tajem&nbsp;Creative</div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-<script src="<?php bloginfo('stylesheet_directory');?>/app.js"></script>
+<?php get_footer();?>
